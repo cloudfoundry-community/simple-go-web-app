@@ -5,7 +5,7 @@ Martini es un poderoso paquete para escribir rápidamente aplicaciones/servicios
 
 ## Vamos a iniciar
 
-Antes de instalar Go y de configurar su [GOPATH](http://golang.org/doc/code.html#GOPATH), cree su primer archivo `.go`. Vamos a llamar a este `server.go`.
+Después de instalar Go y de configurar su [GOPATH](http://golang.org/doc/code.html#GOPATH), cree su primer archivo `.go`. Vamos a llamar a este `server.go`.
 
 ~~~ go
 package main
@@ -331,12 +331,12 @@ func init() {
 
 ### ¿Cómo cambiar el puerto/host?
 
-La función `Run` de Martini observa las variables PORT e HOST para utilizarlas. Caso contrário, Martini asume por defecto localhost:3000. Para tener maayor flexibilidad sobre el puerto y host, use la función `http.ListenAndServe`.
+La función `Run` de Martini observa las variables PORT e HOST para utilizarlas. Caso contrário, Martini asume por defecto localhost:3000. Para tener maayor flexibilidad sobre el puerto y host, use la función `martini.RunOnAddr`.
 
 ~~~ go
   m := martini.Classic()
   // ...
-  log.Fatal(http.ListenAndServe(":8080", m))
+  log.Fatal(m.RunOnAddr(":8080"))
 ~~~
 
 ### ¿Servidor con autoreload?
