@@ -1,5 +1,6 @@
 ---
 applications:
 - name: simple-go-web-app
-  disk: 256M
-  memory: 128M
+  memory: 256M
+  instances: 1
+  random-route: true
