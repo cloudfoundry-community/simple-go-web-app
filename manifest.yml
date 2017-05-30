@@ -3,3 +3,5 @@ applications:
 - name: simple-go-web-app
   disk: 256M
   memory: 128M
+  buildpack: https://github.com/cloudfoundry/go-buildpack.git#v1.7.18
+  random-route: true
