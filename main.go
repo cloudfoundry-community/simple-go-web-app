@@ -10,7 +10,7 @@ import (
 func main() {
 	message := os.Getenv("MESSAGE")
 	if message == "" {
-		message = "Hello world"
+		message = "Hello world for Campus "
 	}
 
 	m := martini.Classic()
